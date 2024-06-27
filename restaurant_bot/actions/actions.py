@@ -43,15 +43,18 @@ class ActionReturnName(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         location = tracker.get_slot("city")
         #temp = str(str(location[0]) + ",%20" + str(location[1]))
         res = webhook(location)
+        if res == "Place not Found":
+            dispatcher.utter_message(text=res)
+            return  []
         strn = "Here is the restaurants that are close to you:\n"
         for i in res:
-            st = str(str(i['name']) + " \n  rated: " + str(i['rating']) + '\n')
+            st = str('\n\n' + str(i['name']) + " \n" + str(i['user_ratings_total']) + " users rated " + str(i['rating']) + '\n' + ' The place is located in ' + i['vicinity'])
             strn = strn + st
-        dispatcher.utter_message(text=strn) 
+        dispatcher.utter_message(text=strn)
 
         return []
 

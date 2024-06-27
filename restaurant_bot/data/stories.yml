@@ -48,8 +48,19 @@ stories:
     - action: utter_ask_city
     - intent: location
     - action: action_return_feed
+    - action: utter_bonappetit
       
-
+- story: restaurant path 2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_great
+    - action: utter_happy
+    - intent: restaurant_list
+    - action: utter_ask_city
+    - intent: location
+    - action: action_return_feed
+    - action: utter_bonappetit
 
 - story: interactive_story_1
   steps:

@@ -26,6 +26,8 @@ slots:
     - type: from_entity
       entity: city
 responses:
+  utter_intro:
+  - text: Hello, I am a bot that can help you find the closes restaurants to you.
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
@@ -34,7 +36,9 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
-  - text: Great, carry on!
+  - text: Great, I'm glad to hear! What can I do for you?
+  utter_bonappetit:
+  - text: Bon appetit!
   utter_goodbye:
   - text: Bye
   utter_iamabot:
