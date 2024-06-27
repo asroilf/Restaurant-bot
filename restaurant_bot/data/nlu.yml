@@ -1,0 +1,137 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: lower_stress
+  examples: |
+    - how can I overcome stress?
+    - how to overcome stress?
+    - give me advice on how to overcome stress
+    - is there any way to overcome stress?
+    - what are the ways to get out of stress?
+    - what should I do to overcome stress?
+    - how can I lower my stress level?
+    - what do I do when I am stressed?
+    - what are the good ways to lower stress?
+    - what are good ways to relax?
+- intent: exercise
+  examples: |
+    - I do workout [regularly](amount).
+    - I do [quit a lot](amount).
+    - [not much](amount).
+    - I workout [4 hour per week](amount)
+    - Yes, I go to the gym [every day](amount).
+    - Nah, [never](amount) heard of it.
+- intent: restaurant_list
+  examples: |
+    - show me the closest restaurants?
+    - show me the list of restaurants near me
+    - is there any restaurant around me?
+    - where can I find a restaurant
+    - i am hungry
+    - I am starving
+    - I want to eat, is there a place where I can find food?
+    - it is time to eat
+    - I want to have a lunch
+    - I need a restaurant
+    - give me the list of restaurants near me
+    - list of restaurants
+    - restaurants
+    - i want to eat
+- intent: location
+  examples: |
+    - I am in [Atlas tibb mərkəzi]{"entity": "city"}
+    - Currently I am in [Azerbaijan State Economic University]{"entity": "city"}
+    - My location is at [Azərbaycan Dövlət Pedaqoji Universiteti]{"entity": "city"}
+    - I live in [5 nömrəli Şəhər Klinik Xəstəxanası]{"entity": "city"}
+    - I am in [Yaşam Tibb Mərkəzi]{"entity": "city"}, Baku.
+    - I'm living in [Orta məktəb №193]{"entity": "city"}.
+    - [Nariman Narimanov]{"entity": "city"}
+    - My location is [Gənclik Şadlıq Sarayı]{"entity": "city"}
+    - [Buta Clinic]{"entity": "city"}
+    - I am staying at [Heydar Aliyev Centre]{"entity": "city"}.
+    - it is [Sevgi parkı]{"entity": "city"}
+    - This is my location [Azəriqaz]{"entity": "city"}.
+    - My location is [Nobel Hotel Baku]{"entity": "city"}
+    - [Cuppa Coffee White City]("entity": "city"} is my location.
+    - the location is [Baku Nobel Heritage Fund]{"entity": "city"}

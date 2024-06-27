@@ -1,0 +1,42 @@
+
+version: "3.1"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_list
+  - action: utter_ask_city
+  - intent: location
+    entities:
+    - city: London
+  - slot_was_set:
+    - city: London
+  - action: utter_affirm_location
+
+version: "3.1"
+stories:
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_list
+  - action: utter_ask_city
+  - intent: nlu_fallback
+  - intent: location
+  - action: utter_affirm_location
+
+version: "3.1"
+stories:
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_list
+  - action: utter_ask_city
+  - intent: location
+    entities:
+    - city: Kulab
+  - slot_was_set:
+    - city: Kulab
+  - action: utter_affirm_location
