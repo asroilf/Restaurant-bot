@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  django:
+    build:
+      context: ./web_service
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rasa
+    environment:
+      - DEBUG=1
+    volumes:
+      - ./web_service:/app
+    depends_on:
+      - rasa
+      - rasa-actions
+
+  rasa:
+    build:
+      context: ./restaurant_bot
+
+    ports:
+      - "5005:5005"
+    command: ["run", "-m", "models", "--enable-api", "--cors", "*"]
+    volumes:
+      - rasa_models:/app/restaurant_bot/models
+    depends_on:
+      - rasa-actions
+
+  rasa-actions:
+    image: rasa/rasa-sdk:latest
+    container_name: rasa_actions_service
+    volumes:
+      - ./restaurant_bot/actions:/app/actions
+    ports:
+      - "5055:5055"
+    command: ["start", "--actions", "actions"]
+
+volumes:
+  rasa_models:
+

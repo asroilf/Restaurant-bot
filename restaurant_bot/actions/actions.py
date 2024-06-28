@@ -27,7 +27,6 @@
 #         return []
 # actions.py
 from typing import Any, Text, Dict, List
-from flask import Flask, request, jsonify
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet

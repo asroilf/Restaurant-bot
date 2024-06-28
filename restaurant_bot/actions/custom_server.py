@@ -1,4 +1,3 @@
-from flask import Flask, request, jsonify
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 #from actions import actions
