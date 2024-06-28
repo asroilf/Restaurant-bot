@@ -49,9 +49,9 @@ class ActionReturnName(Action):
         if res == "Place not Found":
             dispatcher.utter_message(text=res)
             return  []
-        strn = "Here is the restaurants that are close to you:\n"
+        strn = "Here is the restaurants that are close to you:"
         for i in res:
-            st = str('\n\n' + str(i['name']) + " \n" + str(i['user_ratings_total']) + " users rated " + str(i['rating']) + '\n' + ' The place is located in ' + i['vicinity'])
+            st = str('' + str(i['name']) + " \n" + str(i['user_ratings_total']) + " users rated " + str(i['rating']) + '\n' + ' The place is located in ' + i['vicinity'])
             strn = strn + st
         dispatcher.utter_message(text=strn)
 
