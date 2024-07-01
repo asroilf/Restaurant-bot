@@ -31,8 +31,6 @@ services:
   rasa-actions:
     image: rasa/rasa-sdk:latest
     container_name: rasa_actions_service
-    volumes:
-      - ./restaurant_bot/actions:/app/actions
     ports:
       - "5055:5055"
     command: ["start", "--actions", "actions"]
