@@ -34,6 +34,8 @@ services:
     ports:
       - "5055:5055"
     command: ["start", "--actions", "actions"]
+    volumes:
+      - ./restaurant_bot/actions:/app/actions
 
 volumes:
   rasa_models:
